@@ -14,8 +14,9 @@ func home(w http.ResponseWriter, r *http.Request) {
 	// our base layout, and the second is the specific page template for the home
 	// page. It's important that the layout file is listed first.
 	files := []string{
-		"./ui/html/pages/layout.html",
+		"./ui/html/layout/layout.html",
 		"./ui/html/pages/home.html",
+		"./ui/html/partials/nav.html",
 	}
 
 	// Use the template.ParseFiles() function to read the template file into a
