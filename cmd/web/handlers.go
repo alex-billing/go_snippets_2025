@@ -15,8 +15,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 	// page. It's important that the layout file is listed first.
 	files := []string{
 		"./ui/html/layout/layout.html",
-		"./ui/html/pages/home.html",
 		"./ui/html/partials/nav.html",
+		"./ui/html/pages/home.html",
 	}
 
 	// Use the template.ParseFiles() function to read the template file into a
@@ -46,7 +46,7 @@ func snippetView(w http.ResponseWriter, r *http.Request) {
 }
 
 func snippetCreate(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Display a form for creating a new snippet..."))
+	fmt.Fprintf(w, "Display a form for creating a new snippet ...")
 }
 
 func snippetCreatePost(w http.ResponseWriter, r *http.Request) {
